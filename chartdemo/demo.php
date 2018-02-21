@@ -39,6 +39,8 @@ $myPicture->drawLegend(480,210,array("Style"=>LEGEND_NOBORDER,"Mode"=>LEGEND_HOR
  
 $pic = "./img/barcode.png";
 $myPicture->Render($pic);
- echo'<img src="'.$pic.'">';
+// echo'<img src="'.$pic.'">';
+//readfile($pic);
+echo file_get_contents($pic);
 
 ?>
