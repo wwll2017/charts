@@ -2,11 +2,13 @@
 <head>
    <meta charset="UTF-8" />
    <title>Highcharts 教程 | 菜鸟教程(runoob.com)</title>
-   <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-   <script src="https://code.highcharts.com/highcharts.js"></script>
+   <script src="./lib/jquery.min.js"></script>
+   <script src="./lib/highcharts.js"></script>
 </head>
 
 <script language="JavaScript">
+
+    
 $(document).ready(function() {
 	 $('#container').highcharts({
 	        chart: {
@@ -14,8 +16,8 @@ $(document).ready(function() {
 	            plotBorderWidth: null,
 	            plotShadow: false,
 	            events: {
-	            	selection: function (event) {
-	                	console.log('test click.');
+	            	click: function (event) {
+	            		tests();
 	                }}
 	 
 	        },
@@ -55,6 +57,15 @@ $(document).ready(function() {
 	        }]
 	    });
 });
+
+function tests()
+{
+    //debugger;
+    console.log('tests click.');
+    window.open('hashs.html', 'newwindow', 'height=400, width=400, top=140, left=340, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no');
+	}
+
+	
 </script>
 
 <body>
